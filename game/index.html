@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ritual: Proof of Match</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-bg" aria-hidden="true">
+      <div class="bg-orb orb-a"></div>
+      <div class="bg-orb orb-b"></div>
+      <div class="bg-grid"></div>
+    </div>
+
+    <main class="game-shell">
+      <header class="hud" aria-label="Game status">
+        <div class="stat-box">
+          <p class="stat-label">TIMER</p>
+          <p class="stat-value" id="timerValue">60.0</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">SCORE</p>
+          <p class="stat-value" id="scoreValue">0</p>
+        </div>
+        <div class="stat-box">
+          <p class="stat-label">STREAK</p>
+          <p class="stat-value" id="streakValue">0x</p>
+        </div>
+      </header>
+
+      <section class="level-meta">
+        <div class="level-pill" id="levelPill">LEVEL 1 · 2x2</div>
+        <div class="progress-wrap" aria-label="Level progress">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p class="progress-text" id="progressText">0 / 0 pairs matched</p>
+        </div>
+      </section>
+
+      <section class="board-wrap">
+        <div class="board" id="gameBoard" role="grid" aria-label="Memory card board"></div>
+        <div class="level-toast" id="levelToast" aria-live="polite"></div>
+      </section>
+
+      <footer class="controls">
+        <button type="button" class="new-game-btn" id="newGameBtn">New Game</button>
+      </footer>
+    </main>
+
+    <script src="game.js" type="module"></script>
+  </body>
+</html>
